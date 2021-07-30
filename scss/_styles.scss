@@ -1,96 +1,96 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 a {
-    color: $base-color;
+  color: $base-color;
 }
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 body,
 html {
-    font-family: 'Gilroy';
-    color: white;
-    @include media(">=375px") {
-        height: unset;
-    }
-    @include media(">=1280px") {
-        height: 117.18249733191035vh;
-    }
-    // @include media(">=1680px") {
-    //     height: 1920px;
-    // }
+  font-family: "Gilroy";
+  color: white;
+  @include media(">=375px") {
+    height: unset;
+  }
+  @include media(">=1280px") {
+    height: 117.18249733191035vh;
+  }
 }
 body {
-    @include media(">=375px") {
-        background : $bg;
-        align-items: unset;
-        display: flex;
-        justify-content: center;
-    }
-    @include media (">=1280px") {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
+  @include media(">=375px") {
+    background: $bg;
+    align-items: unset;
+    display: flex;
+    justify-content: center;
+  }
+  @include media(">=1280px") {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .main {
-    @include media(">=375px") {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        max-width: 840px;
-    }
-    @include media (">=1280px") {
+  @include media(">=375px") {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 840px;
+  }
+  @include media(">=1280px") {
     height: 1098px;
     flex-direction: unset;
     max-width: unset;
-    }
-    @include media (">=1700px") {
-        width: 1680px;
-        flex-direction: unset;
-    }
+  }
+  @include media(">=1700px") {
+    width: 1680px;
+    flex-direction: unset;
+  }
 }
 .content::before {
-    content: '';
-    position: absolute;
-    bottom: 111px;
-    width: 100%;
-    height: 400px;
-    background: linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(255,79,0,.08) 100%);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: 111px;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0,
+    rgba(255, 79, 0, 0.08) 100%
+  );
+  z-index: -1;
 }
 .content::after {
-    content: '';
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    background: url(../images/pad2.png);
-    height: 88%;
-    z-index: -2;
+  content: "";
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  background: url(../images/pad2.png);
+  height: 88%;
+  z-index: -2;
 }
 .content {
-    background: $ContentBg;
+  background: $ContentBg;
+  position: relative;
+  z-index: 1;
+  @include media(">=375px") {
+    width: 100%;
+    min-height: 100vh;
+  }
+  @include media(">=1280px") {
+    /* width: 61%; */
+    min-width: 780px;
+    max-width: 840px;
     position: relative;
-    z-index: 1;
-    @include media(">=375px") {
-        width: 100%;
-        min-height: 100vh;
-    }
-    @include media (">=1280px") {
-        /* width: 61%; */
-        min-width: 780px;
-        max-width: 840px;
-        position: relative;
-        height: unset;
-        z-index: 100;
-    }
-    @include media (">=1680px") {
-        width: 50%;
-    }
-  
+    height: unset;
+    z-index: 100;
+  }
+  @include media(">=1680px") {
+    width: 50%;
+  }
 }
 // .content::before {
 //     background: url(../images/test.png);
@@ -102,316 +102,310 @@ body {
 //     width: 100%;
 // }
 .car {
-    position: relative;
-    display: flex;
-    @include media(">=375px") {
+  position: relative;
+  display: flex;
+  @include media(">=375px") {
     height: 100vh;
     overflow: hidden;
-    }
-    @include media (">=1280px") {
-        /* width: 39%; */
-        min-width: 400px;
-        height: unset;
-        overflow: visible;
-    }
-    @include media (">=1680px") {
-    width: 50%;
-    }
+  }
+  @include media(">=1280px") {
+    /* width: 39%; */
+    min-width: 400px;
+    height: unset;
+    overflow: visible;
+  }
 }
 .back {
-    @include media(">=375px") {
-        width: 166vw;
-        height: 100vh;
-    }
-    @include media(">=768px") {
-        // width: 100vw;
-    }
-    @include media (">=1280px") {
-        width: initial;
-        height: initial;
-    }
-   
+  @include media(">=375px") {
+    width: 166vw;
+    height: 100vh;
+  }
+  @include media(">=768px") {
+    // width: 100vw;
+  }
+  @include media(">=1280px") {
+    width: initial;
+    height: initial;
+  }
 }
 
 .porsche {
-    position: absolute;
-    @include media (">=375px") {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        top: 5%;
-    }
-    @include media (">=1280px") {
+  position: absolute;
+  @include media(">=375px") {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 5%;
+  }
+  @include media(">=1280px") {
     left: calc(5% + 5px);
     top: calc(5% + 3px);
     width: unset;
-    }
+  }
 }
 .logo {
-    margin-bottom: 8%;
-    height: 18px;
-    @include media (">=375px") {
-        width: 230px;
-    }
-    @include media (">=500px") {
-        width: 270px;
-    }
+  margin-bottom: 8%;
+  height: 18px;
+  @include media(">=375px") {
+    width: 230px;
+  }
+  @include media(">=500px") {
+    width: 270px;
+  }
 }
 .singer {
-    margin-top: 8%;
-    margin-left: -4%;
-    height: 54px;
-    @include media (">=375px") {
-        margin-top: unset;
-        width: 155px;
-    }
-    @include media (">=500px") {
-        width: 157px;
-    }
-    @include media (">=800px") {
-        margin-left: unset;
-    }
+  margin-top: 8%;
+  margin-left: -4%;
+  height: 54px;
+  @include media(">=375px") {
+    margin-top: unset;
+    width: 155px;
+  }
+  @include media(">=500px") {
+    width: 157px;
+  }
+  @include media(">=800px") {
+    margin-left: unset;
+  }
 }
 .arrow {
-    background: url(../svg/arrow.svg) no-repeat;
-    width: 45px;
-    height: 24px;
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 22px);
-    @include media (">=1280px") {
-        display: none;
-    }
+  background: url(../svg/arrow.svg) no-repeat;
+  width: 45px;
+  height: 24px;
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 22px);
+  @include media(">=1280px") {
+    display: none;
+  }
 }
 
 .navigation label {
-    width: 46px;
-    height: 28px;
-    position: absolute;
-    cursor: pointer;
+  width: 46px;
+  height: 28px;
+  position: absolute;
+  cursor: pointer;
 }
 .navigation label::before {
-    position: absolute;
-    top: 8px;
-    right: 5px;
-    width: 45px;
-    height: 2px;
-    background: $base-color;
-    content: "";
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  width: 45px;
+  height: 2px;
+  background: $base-color;
+  content: "";
 }
 .navigation label::after {
-    position: absolute;
-    bottom: 8px;
-    right: 5px;
-    width: 35px;
-    height: 2px;
-    background: $base-color;
-    content: "";
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  width: 35px;
+  height: 2px;
+  background: $base-color;
+  content: "";
 }
 .navigation input[type="checkbox"] {
-    display: none;
+  display: none;
 }
 .navigation {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: calc(7% + 4px);
+  margin-bottom: 35px;
+  @include media(">=375px") {
+    display: none;
+  }
+  @include media(">=1280px") {
+    margin-right: unset;
     display: flex;
-    justify-content: flex-end;
+  }
+  @include media(">=1680px") {
     margin-right: calc(7% + 4px);
-    margin-bottom: 35px;
-    @include media(">=375px") {
-        display: none;
-    }
-    @include media(">=1280px") {
-        margin-right: unset;
-        display: flex;
-    }
-    @include media(">=1680px") {
-        margin-right: calc(7% + 4px);
-    }
+  }
 }
 .navigation img {
-    margin-right: calc(14% + 2px);
+  margin-right: calc(14% + 2px);
 }
 .content-wrapper {
-    padding-left: calc(14% + 0px);
-    margin-top: calc(7% + 4px);
+  padding-left: calc(14% + 0px);
+  margin-top: calc(7% + 4px);
 
-    @include media (">=375px") {
-        padding-top: 30px;
-        padding-left: calc(10% - 4px);
-    }
-    @include media (">=1280px") {
-        padding-top: inherit;
-    }
+  @include media(">=375px") {
+    padding-top: 30px;
+    padding-left: calc(10% - 4px);
+  }
+  @include media(">=1280px") {
+    padding-top: inherit;
+  }
 }
-h1{
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 10px;
-    margin-bottom: 20px;
+h1 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
 }
 h1 span {
-    color: #8a8a8a;
-    margin-right: 13px;
+  color: #8a8a8a;
+  margin-right: 13px;
 }
 h1 strong {
-    color: $base-color;
+  color: $base-color;
 }
 h2 {
+  font-size: 70px;
+  font-weight: 300;
+  line-height: 85px;
+  position: relative;
+  margin-bottom: 31px;
+  @include media(">=375px") {
+    font-size: 57px;
+  }
+  @include media(">=500px") {
     font-size: 70px;
-    font-weight: 300;
-    line-height: 85px;
-    position: relative;
-    margin-bottom: 31px;
-    @include media (">=375px") {
-        font-size: 57px;
-    }
-    @include media (">=500px") {
-        font-size: 70px;
-    }
-    @include media (">=1280px") {
-        width: 490px;
-    }
-    @include media (">=1680px") {
-        width: 70%;
-    }
+  }
+  @include media(">=1280px") {
+    width: 490px;
+  }
+  @include media(">=1680px") {
+    width: 70%;
+  }
 }
 h2 span {
-    font-weight: bold;
+  font-weight: bold;
 }
 h2::before {
-    content: "";
-    height: 220px;
-    width: 7px;
-    background: $base-color;
-    display: block;
-    position: absolute;
-    left: -10%;
-    top: 7%;
+  content: "";
+  height: 220px;
+  width: 7px;
+  background: $base-color;
+  display: block;
+  position: absolute;
+  left: -10%;
+  top: 7%;
 }
 .content-wrapper p {
-    font-size: 19px;
-    line-height: 38px;
-    margin-bottom: 72px;
-    @include media (">=375px") {
-        text-align: justify;
-        width: 96%;
-    }
-    @include media (">=500px") {
-        width: 89%;
-    }
-    @include media (">=1280px") {
-        width: 564px;
-    }
-    @include media (">=1680px") {
-        width: 74%;
-    }
-    
+  font-size: 19px;
+  line-height: 38px;
+  margin-bottom: 72px;
+  @include media(">=375px") {
+    text-align: justify;
+    width: 96%;
+  }
+  @include media(">=500px") {
+    width: 89%;
+  }
+  @include media(">=1280px") {
+    width: 564px;
+  }
+  @include media(">=1680px") {
+    width: 74%;
+  }
 }
 .content-wrapper p span {
-    font-weight: 600;
+  font-weight: 600;
 }
 .details {
-    background: rgba(255, 79, 0, 0.1);
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 23px 68px;
-    border: solid 3px $base-color;
-    letter-spacing: 8px;
-    color: white;
-    text-decoration: none;
-    margin-left: 3px;
-    box-shadow: 0 20px 50px 0 rgba(0,0,0,.25);
+  background: rgba(255, 79, 0, 0.1);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 23px 68px;
+  border: solid 3px $base-color;
+  letter-spacing: 8px;
+  color: white;
+  text-decoration: none;
+  margin-left: 3px;
+  box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.25);
 }
 .details:hover {
-    text-decoration: unset;
+  text-decoration: unset;
 }
 .buttons {
-    margin-top: 94px;
-    margin-bottom: 55px;
-    padding-left: 2px;
+  margin-top: 94px;
+  margin-bottom: 55px;
+  padding-left: 2px;
 }
 .button-left,
-.button-right
- {
-    margin-right: 57px;
+.button-right {
+  margin-right: 57px;
 }
 .gallery {
-    display: flex;
-    z-index: 1;
-    @include media(">=375px") {
-        overflow: hidden;
-        margin-bottom: 30px;
-    }
-    @include media (">=1137px") {
-        overflow: unset;
-    }
-    @include media(">=1280px") {
-        margin-left: -36%;
-        margin-bottom: initial;
-        overflow: unset;
-    }
-    @include media(">=1680px") {
-        margin-left: -33%;
-    }
+  display: flex;
+  z-index: 1;
+  @include media(">=375px") {
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  @include media(">=1137px") {
+    overflow: unset;
+  }
+  @include media(">=1280px") {
+    margin-left: -36%;
+    margin-bottom: initial;
+    overflow: unset;
+  }
+  @include media(">=1680px") {
+    margin-left: -33%;
+  }
 }
 .gallery li:hover img {
-    box-shadow: 0px 25px 80px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 25px 80px 0px rgba(0, 0, 0, 0.7);
 }
 .gallery li:last-child {
-    @include media(">=375px") {
-        border-top: none;
-        transform: translate(0.0);
-      }
-    @include media(">=1280px") {
-        transform:translate(0, -25px);
-        border-top: 10px solid $base-color;
-    }
+  @include media(">=375px") {
+    border-top: none;
+    transform: translate(0);
+  }
+  @include media(">=1280px") {
+    transform: translate(0, -25px);
+    border-top: 10px solid $base-color;
+  }
 }
 .gallery li:last-child img {
-    @include media(">=1280px") {
-        box-shadow: 0px 25px 80px 0px rgba(0, 0, 0, 0.7);
-    }
+  @include media(">=1280px") {
+    box-shadow: 0px 25px 80px 0px rgba(0, 0, 0, 0.7);
+  }
 }
 .gallery li:hover {
-    @include media(">=375px") {
-      border-top: none;
-      transform: translate(0.0);  
-    }
-    @include media(">=1280px") {
-        transform:translate(0, -25px);
-        border-top: 10px solid $base-color;
-    }
+  @include media(">=375px") {
+    border-top: none;
+    transform: translate(0);
+  }
+  @include media(">=1280px") {
+    transform: translate(0, -25px);
+    border-top: 10px solid $base-color;
+  }
 }
 
 .car label {
-    width: 52px;
-    height: 28px;
-    position: absolute;
-    cursor: pointer;
-    margin-top: 50px;
-    @include media (">=1280px") {
-        display: none;
-    }
+  width: 52px;
+  height: 28px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 50px;
+  @include media(">=1280px") {
+    display: none;
+  }
 }
 .car label::before {
-    position: absolute;
-    top: 8px;
-    right: 5px;
-    width: 45px;
-    height: 3px;
-    background: $base-color;
-    content: "";
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  width: 45px;
+  height: 3px;
+  background: $base-color;
+  content: "";
 }
 .car label::after {
-    position: absolute;
-    bottom: 8px;
-    right: 5px;
-    width: 45px;
-    height: 3px;
-    background: $base-color;
-    content: "";
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  width: 45px;
+  height: 3px;
+  background: $base-color;
+  content: "";
 }
 .car input[type="checkbox"] {
-    display: none;
+  display: none;
 }
