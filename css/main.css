@@ -164,7 +164,7 @@ a:hover {
 
 body,
 html {
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   color: white; }
   @media (min-width: 375px) {
     body,
@@ -207,7 +207,7 @@ html {
     flex-direction: unset; } }
 
 .content::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 111px;
   width: 100%;
@@ -216,7 +216,7 @@ html {
   z-index: -1; }
 
 .content::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   width: 100%;
@@ -257,9 +257,6 @@ html {
       min-width: 400px;
       height: unset;
       overflow: visible; } }
-  @media (min-width: 1680px) {
-    .car {
-      width: 50%; } }
 
 @media (min-width: 375px) {
   .back {
